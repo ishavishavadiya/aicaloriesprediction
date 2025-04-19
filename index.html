@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <style>
+        body {
+            background: linear-gradient(rgba(245, 255, 250, 0.85), rgba(240, 255, 255, 0.85)),
+                url("{{ url_for('static', filename='images/bg.jpg') }}") no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            animation: fadeInBg 2s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Welcome to the Calorie Prediction App</h1>
+        <form action="/result" method="POST">
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+
+            <label for="height">Height (cm):</label>
+            <input type="number" id="height" name="height" required>
+
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight" name="weight" required>
+
+            <label for="activity">Activity Level:</label>
+            <select id="activity" name="activity" required>
+                <option value="Low">Low</option>
+                <option value="Moderate">Moderate</option>
+                <option value="High">High</option>
+            </select>
+
+            <label for="goal">Goal:</label>
+            <select id="goal" name="goal" required>
+                <option value="Weight Loss">Weight Loss</option>
+                <option value="Weight Maintenance">Weight Maintenance</option>
+                <option value="Muscle Gain">Muscle Gain</option>
+            </select>
+
+            <label for="preference">Diet Preference:</label>
+            <select id="preference" name="preference" required>
+                <option value="None" selected>None</option>
+                <option value="Vegetarian">Vegetarian</option>
+                <option value="Non-Vegetarian">Non-Vegetarian</option>
+                <option value="Vegan">Vegan</option>
+            </select>
+
+            <label for="lifestyle">Lifestyle:</label>
+            <select id="lifestyle" name="lifestyle" required>
+                <option value="Sedentary">Sedentary</option>
+                <option value="Active">Active</option>
+                <option value="Very Active">Very Active</option>
+            </select>
+
+            <label for="restriction">Dietary Restrictions:</label>
+            <select id="restriction" name="restriction" required>
+                <option value="No Restriction">No Restriction</option>
+                <option value="Dairy Free">Dairy Free</option>
+                <option value="Gluten Free">Gluten Free</option>
+            </select>
+
+            <label for="health_condition">Health Condition:</label>
+            <select id="health_condition" name="health_condition" required>
+                <option value="None" selected>None</option>
+                <option value="Diabetes">Diabetes</option>
+                <option value="Heart Disease">Heart Disease</option>
+            </select>
+
+            <input type="submit" value="Predict Calories">
+        </form>
+    </div>
+</body>
+</html>

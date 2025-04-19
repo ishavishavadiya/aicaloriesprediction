@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='result.css') }}">
+    <title>Result</title>
+</head>
+<body>
+    <div class="container">
+
+        <!-- Calorie Section -->
+        <div class="section-box">
+            <h1>Calorie Prediction Result</h1>
+            <p>Your daily recommended calorie intake is: <strong>{{ calories }} kcal/day</strong></p>
+        </div>
+
+        <div class="section-box">
+            <h3>Macro Nutrient Breakdown</h3>
+            <ul>
+              <li>Carbohydrates: {{ macro_estimates['Carbs (g)'] }}g</li>
+              <li>Protein: {{ macro_estimates['Protein (g)'] }}g</li>
+              <li>Fat: {{ macro_estimates['Fat (g)'] }}g</li>
+            </ul>
+        </div>          
+
+        <!-- Meal Plan Section -->
+        <div class="section-box">
+            <h2>Suggested Meal Plan</h2>
+            <img src="{{ url_for('static', filename='images/meal.jpg') }}" alt="Healthy Meal" class="section-img-mini">
+            <ul class="meal-plan">
+                <li><strong>Breakfast:</strong> {{ meal_plan['Breakfast'] }}</li>
+                <li><strong>Lunch:</strong> {{ meal_plan['Lunch'] }}</li>
+                <li><strong>Dinner:</strong> {{ meal_plan['Dinner'] }}</li>
+                <li><strong>Snack:</strong> {{ meal_plan['Snack'] }}</li>
+            </ul>
+
+            {% if meal_plan['Recipe Links'] %}
+            <h3>Recipe Videos</h3>
+            <ul class="recipe-links">
+                {% for link in meal_plan['Recipe Links'] %}
+                    <li><a href="{{ link }}" target="_blank">Watch Recipe Video</a></li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </div>
+
+        <!-- Workout Plan Section -->
+        <div class="section-box">
+            <h2>Suggested Workouts</h2>
+            <img src="{{ url_for('static', filename='images/exercise.jpg') }}" alt="Workout Routine" class="section-img-mini">
+            <ul class="workout-plan">
+                {% for workout, link in workout_plan %}
+                    <li>
+                        {{ workout }}
+                        {% if link %}
+                            - <a href="{{ link }}" target="_blank">Watch Workout</a>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <a href="/">← Go Back</a>
+    </div>
+</body>
+</html>

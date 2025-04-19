@@ -1,0 +1,138 @@
+/* Reset & base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom right, #f2f8f7, #d3e7e5);
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+/* Section Box Wrapper */
+.section-box {
+    background-color: #ffffffcc;
+    padding: 80px 80px;
+    margin-bottom: 30px;
+    border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    backdrop-filter: blur(4px);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    font-size: clamp(1rem, 1.5vw, 1.1rem); /* Responsive text */
+    line-height: 1.6;
+}
+
+
+/* Headings */
+h1 {
+    font-size: 2.2em;
+    margin-bottom: 12px;
+    color: #395a56;
+}
+
+h2 {
+    font-size: 1.6em;
+    margin-top: 30px;
+    color: #4d7e79;
+    border-bottom: 2px solid #aad2cd;
+    padding-bottom: 10px;
+}
+
+h3 {
+    font-size: 1.3em;
+    color: #4d7e79;
+    margin-top: 20px;
+}
+
+/* List styles */
+ul {
+    list-style-type: none;
+    margin-top: 15px;
+    padding: 0;
+    text-align: left;
+}
+
+li {
+    margin-bottom: 10px;
+    font-size: 1.05em;
+}
+
+/* Meal & workout plans */
+.meal-plan li {
+    background-color: #eaf8f6;
+    padding: 10px 14px;
+    border-left: 6px solid #93c9c6;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.workout-plan li {
+    background-color: #f0f8ff;
+    padding: 10px 14px;
+    border-left: 6px solid #b5d6e3;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.recipe-links li {
+    margin-top: 8px;
+    color: #000000;
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Image styling */
+.section-img {
+    width: 100%;
+    max-width: 360px;
+    margin: 25px auto;
+    display: block;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.section-img-mini {
+    width: 100%;
+    max-width: 260px;
+    margin: 15px auto 10px auto;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+/* Link styles */
+a {
+    color: #348b7b;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Back link */
+.container a[href="/"] {
+    display: inline-block;
+    margin-top: 30px;
+    background-color: #2a574b;
+    padding: 12px 25px;
+    border-radius: 10px;
+    color: white;
+    transition: background-color 0.3s;
+    font-size: 1em;
+}
+
+.container a[href="/"]:hover {
+    background-color: #74bdb0;
+}

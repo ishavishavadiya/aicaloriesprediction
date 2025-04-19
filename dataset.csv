@@ -1,0 +1,11 @@
+Age,Gender,Height,Weight,Activity Level,Fitness Goal,Dietary Preferences,Fitness Goals,Lifestyle Factors,Dietary Restrictions,Health Conditions,Calories
+25,Male,170,70,Moderate,Maintain,Vegetarian,Maintain,Sedentary,None,Diabetes,2500
+30,Female,160,60,Active,Weight Loss,Non-Vegetarian,Weight Loss,Active,Gluten-Free,Hypertension,1800
+22,Male,180,80,Active,Weight Gain,Vegetarian,Weight Gain,Active,Low-Carb,None,3000
+28,Female,165,65,Sedentary,Maintain,Vegan,Maintain,Moderate,Dairy-Free,Heart Disease,2000
+35,Male,175,85,Moderate,Weight Loss,Non-Vegetarian,Weight Loss,Moderate,None,High Cholesterol,2200
+40,Female,155,55,Active,Maintain,Vegetarian,Maintain,Active,Gluten-Free,Hypertension,2000
+50,Male,185,90,Moderate,Maintain,Non-Vegetarian,Maintain,Sedentary,None,Heart Disease,2500
+60,Female,150,50,Sedentary,Weight Loss,Vegetarian,Weight Loss,Moderate,None,Diabetes,1500
+33,Male,177,75,Active,Weight Gain,Non-Vegetarian,Weight Gain,Active,Low-Carb,None,2700
+45,Female,162,68,Sedentary,Maintain,Vegan,Maintain,Sedentary,Gluten-Free,Hypertension,1900
